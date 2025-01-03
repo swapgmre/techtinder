@@ -56,3 +56,7 @@ we will use req.query
 /user/:userId/:name - dynamic routes
 req.params
 /user/Swapnil/test
+
+### DAY 03 - Route Handlers, Middlewares and Error Handlers
+
+-app.use will handle any type of request whereas app.""specific routes like get, post etc" will handle that particular route.
