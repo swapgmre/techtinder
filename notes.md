@@ -60,3 +60,16 @@ req.params
 ### DAY 03 - Route Handlers, Middlewares and Error Handlers
 
 -app.use will handle any type of request whereas app.""specific routes like get, post etc" will handle that particular route.
+-Multiple Route Handlers- Play with the code
+-next function and errors along with res.send()
+-app.use("/route", rh, [rH2, rH3], rH4), rH5);
+
+- The function or route handler which sends res back is called route handler and the other handlers are called middlewares
+  -What is a middleware
+  -How express JS handles requests BTS
+  -What is the use of Middlewares?
+  -Middleware is generally used using app.use
+  -There is also a method app.all
+  -Difference app.use and app.all
+  -Write a dummy auth middleware for admin
+  -Write a dummy auth middleware for all user routes, except/ user/login
