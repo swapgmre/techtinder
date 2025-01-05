@@ -2,21 +2,20 @@ const express = require("express");
 const app = express();
 const { adminAuth, userAuth } = require("./middlewares/auth")
 
-
-// Handle Auth Middleware for all methods  - GET, POST etc so we use app.use 
-app.use("/admin", adminAuth);
-
-app.get("/user", userAuth, (req, res) => {
-  res.send("User data sent");
-})
-
-app.get("/admin/getAllData", (req, res) => {
-  //lofic of  Checking if the request is authorized by Admin
-  res.send("All Data Sent");
+app.get("/getUserData", (req, res) => {
+  try {
+    // Logic of DB call and get user data
+    throw new Error("csjjncnn");
+    res.send("User data Sent")
+  } catch (error) {
+    res.status(500).send("Some Error Contact support team")
+  }
 });
 
-app.get("/admin/deleteUser", (req, res) => {
-  res.send("Deleted a User");
+app.use("/", (err, req, res, next) => {
+  if (err) {
+    res.status(500).send("Something  went wrong")
+  }
 })
 
 app.listen(7777, () => {
