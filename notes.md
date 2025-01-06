@@ -73,4 +73,15 @@ req.params
   -Difference app.use and app.all
   -Write a dummy auth middleware for admin
   -Write a dummy auth middleware for all user routes, except/ user/login
-  -
+  -Wild Card Error Handling
+
+## DAY 04 - Database, Schema & Models | Mongoose
+
+- Create a free cluster on MongoDB official website - Mongo Atlas
+- Install Mongoose
+- Connect your applicaton to the DB "Connection URL"/tinderDB
+- Call connectDB function and connect to database before starting application on 7777
+  -Create a userSchema and userModel
+  -Create POST/signup API to add datat to database
+  -Push some documents using API calls from postman
+  -Error Handling using try-catch
