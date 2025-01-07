@@ -85,3 +85,25 @@ req.params
   -Create POST/signup API to add datat to database
   -Push some documents using API calls from postman
   -Error Handling using try-catch
+
+## DAY 05 Diving into the APIs
+
+-JS Object vs JSON (difference)
+-Add the express.json middleware to your app
+-Make your signup API dynamic to recieve data from the end user
+-User.findOne with duplicate emailIds which will it return latest object or older.
+-API - Get user by email
+-API - Feed API - GET /feed - get all the users from the database
+-API- Get user by Id
+-API - DELETE/user
+-Diff between PATCH and PUT
+-API- PATCH/user
+
+## DAY 06 Data Sanitization & Schema Validations
+
+-Explore schematype options from the documentation
+-Add required, unique, lowercase, min, minLength, trim
+-Add default
+-Create a custom validate function for gender
+-Improve the DB schema - Put all appropriate validations
+-Add timestamps to the userSchema
