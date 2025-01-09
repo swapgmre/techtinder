@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const validator = require("validator")
+
 
 const userSchema = new mongoose.Schema({
   firstName: {
@@ -16,10 +18,20 @@ const userSchema = new mongoose.Schema({
     unique: true,
     lowercase: true,
     trim: true,
+    validate(value) {
+      if (!validator.isEmail(value)) {
+        throw new Error("Invalid email address:" + value);
+      }
+    }
   },
   password: {
     type: String,
     required: true,
+    validate(value) {
+      if (!validator.isStrongPassword(value)) {
+        throw new Error("Invalid Credentials");
+      }
+    }
   },
   age: {
     type: Number,
@@ -35,7 +47,12 @@ const userSchema = new mongoose.Schema({
   },
   photoUrl: {
     type: String,
-    default: "https://www.ihna.edu.au/blog/user-dummy/"
+    default: "https://www.ihna.edu.au/blog/user-dummy/",
+    validate(value) {
+      if (!validator.isURL(value)) {
+        throw new Error("Invalid photo url" + value);
+      }
+    }
   },
   about: {
     type: String,

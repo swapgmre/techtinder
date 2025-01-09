@@ -109,3 +109,15 @@ req.params
 -Add timestamps to the userSchema
 -Add API level validations on PATCH request & SignUp POST API
 -DATA Sanitizing - Add API validations for each field
+-Install validator
+-Explore validator library functions and use validator functions for password, email and photoUrl
+-Never Trust req.body
+
+## DAY 07 Encrypting Passwords
+
+-Validate data in Signup API and create a helper function
+-Install bcrypt package
+-Create a PasswordHash using bcrypt.hash and save the user with encrypted password
+-Create login API
+-Compare passwords and throw errors if email or password
+is invalid
