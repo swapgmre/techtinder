@@ -121,3 +121,31 @@ req.params
 -Create login API
 -Compare passwords and throw errors if email or password
 is invalid
+
+## DAY 08 Authentication, JWT & Cookies
+
+-Install cookieparser
+-Send a dumy token to user
+-create GET/profile API and check if you get the cookie back
+-Install jsonwebtoken
+-In Login API, after email and password validation, create a JWT web token and send it to user in cookies
+-Read the cookies inside your profile API and find the logged in user.
+-userAuth Middleware
+-Add the userAuth middleware in profile API and a new sendConnectionRequest API
+-Set the expiry of jwt token and cookies to 7 days
+-Create userSchema method to getJWT()
+-Create userSchema method to comparepassword(passwordInputByUser)
+
+## DAY 09
+
+-Explore tinder APIs
+-Create a list of all APIs
+-Group multiple routes under respective routers
+-Read documentation for express.Router
+-Create routes folder for managing auth profile request routers
+-Create authRouter, profileRouter, requestRouter
+-Import these routes in app.js
+-Create POST/logout API
+-Create PATCH /profile/edit API
+-Create PATCH /profile/password API => forgot password API
+-Make sure validate all data in every POST, PATCH APIs
