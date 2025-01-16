@@ -149,3 +149,14 @@ is invalid
 -Create PATCH /profile/edit API
 -Create PATCH /profile/password API => forgot password API
 -Make sure validate all data in every POST, PATCH APIs
+
+-Create Connection Request Schema
+-Send Connection Request API
+-Proper validation of data
+-Think abou all corner cases
+-$or query $and query in mongoose/mongoDB and other query selectors
+-schema.pre("save") function
+-Read the article about compund indexes
+-Why do we need index in DB?
+-What are the advantages and disadvantages of creating index
+-ALWAYS THINK ABOUT CORNER CASES
