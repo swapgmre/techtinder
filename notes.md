@@ -160,3 +160,17 @@ is invalid
 -Why do we need index in DB?
 -What are the advantages and disadvantages of creating index
 -ALWAYS THINK ABOUT CORNER CASES
+
+## DAY 10
+
+-Write code with proper validations for POST /request/review/:status/:requestId
+-Thought process - POST vs GET
+-Read about query ref, populate (replacement for joins )
+-Create API GET/user/ requests/received with all the checks
+-Create GET /user/connections
+
+## DAY 11
+
+- Logic for GET /feed API
+- Explore the $nin, $and, $ne and other queries
+- Pagination
