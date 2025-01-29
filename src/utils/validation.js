@@ -30,8 +30,16 @@ const validateLoginInput = (req) => {
 const validateEditProfileData = (req) => {
   const allowedEditFields = ["firstName", "lastName", "gender", "photoUrl", "about", "age", "skills"];
 
-  const isEditAllowed = Object.keys(req.body).every((field) => allowedEditFields.includes(field));
+  const allowedGenders = ["Male", "Female", "Other", "Prefer not to say"]
 
+  const isEditAllowed = Object.keys(req.body).every((field) => {
+
+    if (field === "gender") {
+      return allowedGenders.includes(req.body[field])
+    }
+
+    return allowedEditFields.includes(field);
+  });
 
   return isEditAllowed;
 }
